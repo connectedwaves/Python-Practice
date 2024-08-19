@@ -1,0 +1,63 @@
+amount = int(input("Enter the amount: "))
+
+n2000=n500=n200=n100=n50=n20=n10=n5=n2=n1=0
+
+if amount>=2000:
+  n2000=amount//2000
+  amount%=2000 #this will pass the reminder of the amount to the subsequent condtion
+
+if amount>=500:
+  n500=amount//500
+  amount%=500
+
+if amount>=200:
+  n200=amount//200
+  amount%=200
+
+if amount>=100:
+  n100=amount//100
+  amount%=100
+
+if amount>=50:
+  n50=amount//50
+  amount%=50
+
+if amount>=20:
+  n20=amount//20
+  amount%=20
+
+if amount>=10:
+  n10=amount//10
+  amount%=10
+
+if amount>=5:
+  n5=amount//5
+  amount%=5
+
+if amount>=2:
+  n2=amount//2
+  amount%=2
+
+if amount>=1:
+  n1=amount
+if n2000>0:
+  print(f"Rs 2000: {n2000}")
+if n500>0:
+  print(f"Rs 500: {n500}")
+if n200>0:
+  print(f"Rs 200: {n200}")
+if n100>0:
+  print(f"Rs 100: {n100}")
+if n50>0:
+  print(f"Rs 50: {n50}")
+if n20>0:
+  print(f"Rs 20: {n20}")
+if n10>0:
+  print(f"Rs 10: {n10}")
+if n5>0:
+  print(f"Rs 5: {n5}")
+if n2>0:
+  print(f"Rs 2: {n2}")
+if n1>0:
+  print(f"Rs 1: {n1}")
+
