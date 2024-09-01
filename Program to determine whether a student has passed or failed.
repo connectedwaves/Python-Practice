@@ -1,0 +1,17 @@
+# Program to determine whether a student has passed or failed.
+# Passing criteria: Total percentage >= 40% and at least 33% in each subject.
+
+# Input marks for three subjects
+marks1 = int(input("Enter Marks 1: "))
+marks2 = int(input("Enter Marks 2: "))
+marks3 = int(input("Enter Marks 3: "))
+
+# Calculate total percentage
+total_marks = marks1 + marks2 + marks3
+total_percentage = (total_marks / 300) * 100
+
+# Check pass/fail conditions
+if total_percentage >= 40 and marks1 >= 33 and marks2 >= 33 and marks3 >= 33:
+    print(f"You have passed! Your total percentage is {total_percentage:.2f}%.")
+else:
+    print(f"Unfortunately, you have failed. Better luck next time. Your total percentage is: {total_percentage:.2f}%.")
