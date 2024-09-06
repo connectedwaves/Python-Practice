@@ -6,23 +6,27 @@ contains the previous Hi-score. You need to write a program to update the Hisco
 import random
 
 def game():
-    print("You are playing the game..")
-    score=random.randint(1,62)
-    #return random integer between 1 & 62
+    print("You are playing the game.. .")
+    score = random.randint(1,100)
 
-    with open("hiscore.txt") as f:
+    with open("hiscore_ps2.txt") as f:
         hiscore = f.read()
+
         if (hiscore != ""):
             hiscore = int(hiscore)
         else:
             hiscore = 0
 
-    print(f"Your score: {score}")
-    if (score>hiscore):
-        #write this highscore to the file
-        with open("hiscore.txt","w") as f:
-            f.write(str(score))
+    print(f"Your score is: {score}")
 
+    if (score > hiscore):
+     with open ("hiscore_ps2.txt","w") as f:
+        f.write(str(score))
+        print(f"{score} is the highscore")
+
+    else:
+        print(f"{hiscore} is the hiscore")
+    
     return score
 
 game()
