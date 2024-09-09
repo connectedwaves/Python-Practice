@@ -1,0 +1,19 @@
+def generateTable(n):
+    table = ""
+    for i in range (1,101):
+        table += f"{n} X {i} = {n*i}\n" 
+        #defining function for generating multiplication table using for loop
+
+    with open(f"Tables1/table_{n}.txt","w") as f:
+        f.write(table) 
+        #This two lines opens the folder named table and saves it in in respective table name
+
+    ''' The above code defines a function to generate 
+    multiplacation table using for loop and 
+    save it in the already created folder '''
+
+for i in range (2,21):
+    generateTable(i)
+
+print("The multiplacation table has been generated in the folder")
+
