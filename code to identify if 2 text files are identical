@@ -1,0 +1,13 @@
+# Program to check if content of two text files are identical
+
+with open("this.txt") as f:
+    cont1 = f.read()
+
+with open ("this_copy.txt") as f:
+    cont2 = f.read()
+
+if (cont1 == cont2):
+    print("Yes, these files are identical")
+
+else:
+    print("No, the contents are not identical")
