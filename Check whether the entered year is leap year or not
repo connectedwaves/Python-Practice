@@ -1,0 +1,31 @@
+#Check whether the entered year is leap year or not.
+
+''' Leap Year Rule Breakdown:
+1. A year is a leap year if it is **divisible by 4**.
+2. **However**, if the year is **divisible by 100**, it must also be **divisible by 400** to be a leap year.
+
+Now, let's check 1900:
+- **1900 ÷ 4 =** ✅ Divisible by 4 (passes the first condition)
+- **1900 ÷ 100 =** ✅ Divisible by 100 (needs further checking)
+- **1900 ÷ 400 =** ❌ Not divisible by 400 (fails the final condition)
+
+Since 1900 fails the last condition (not divisible by 400), it **is not** a leap year. 
+
+### The Reason Behind This Exception:
+The Gregorian calendar corrects for slight inaccuracies in Earth's orbit. If we treated all years divisible by 4 as leap years, we would **overcompensate** and create a drift in the seasons over centuries. The **"divisible by 400" rule** helps maintain accuracy over long periods.
+
+This is why **2000** was a leap year (since it's divisible by 400), but **1900, 1800, and 1700 were not**.
+'''
+
+year = int(input("Enter the year"))
+
+if year % 4 == 0:
+    if year % 100 == 0:
+        if year % 400 == 0:
+            print(year, "is a leap year")
+        else:
+            print(year, "is not a leap year")
+    else:
+        print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
